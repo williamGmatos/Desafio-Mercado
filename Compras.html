@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compras</title>
+    <link rel="shortcut icon" href="Video-Games/Shop-icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="Estilos.css">
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+    <header>
+        <h1><a href="Gamers.html">GOG</a></h1>
+        <nav>
+            <ul>
+                <li>Gamers</li>
+                <li>Playstation</li>
+                <li>Xbox</li>
+                <li>Computador</li>
+                <li>Notebook</li>
+                <li>Lançamento</li>
+            </ul>
+        </nav>
+        <button>Carrinho<span style="background-image: linear-gradient(to right, rgb(241, 33, 33), rgb(245, 75, 75)); border-radius: 50%;padding: 0px 5px; color: white; margin: 3px;"><small>1</small></span></button>
+    </header>
+    <main>
+        <section>
+            <h2>Preencha seus dados</h2>
+            <form action="compra.php" method="post" autocomplete="on">
+                <p><label for="nome">Nome:</label></p>
+                <p><input type="text" name="nome" id="nome" placeholder="primeiro nome" required><span>*</span></p>
+                <p><label for="sobrenome">Sobrenome:</label></p>
+                <p><input type="text" name="sobrenome" id="sobrenome" placeholder="segundo nome" required><span>*</span></p>
+                <p><label for="cpf">CPF:</label></p>
+                <p><input type="number" name="cpf" id="cpf" placeholder="digite seu cpf" required><span>*</span></p>
+                <p><label for="telefone">Telefone:</label></p>
+                <p><input type="tel" name="telefone" id="telefone" placeholder="(xx) xxxxx-xxxx" maxlength="11" required><span>*</span></p>
+                <p>
+                    <label for="pagamento">Forma de Pagamento:</label> <br>
+                    <input type="radio" name="pagamento" id="formaD"> Débito <br>
+                    <input type="radio" name="pagamento" id="formaC"> Crédito <br>
+                    <input type="radio" name="pagamento" id="formaP"> Pix <br>
+                    <input id="botão" type="button" value="Confirmar" onclick="confirmar()">
+                </p>
+                <p>
+                    <label style="display: none;" id="pixx" for="pix">Pix:</label>
+                    <input style="display: none;" type="text" name="pix" id="pix">
+                    <label style="display: none;" id="cartãoss" for="cartãos">Cartão:</label>
+                    <input style="display: none;" type="number" name="cartãos" id="cartãos">
+                </p>
+                <p id="final"><input id="finalizar" type="submit" value="Finalizar" onclick="finalizar()"></p>
+            </form>
+        </section>
+    </main>
+    <script src="form.js"></script>
+</body>
+</html>
